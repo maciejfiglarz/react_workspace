@@ -1,10 +1,28 @@
 {
   "extends": ["airbnb", "prettier", "prettier/react"],
+  "env": {
+    "jest": true
+  },
+  "parserOptions": {
+    "ecmaVersion": 11
+  },
+  "globals": { "document": true },
   "rules": {
+    "import/no-unresolved": 1,
+    "import/prefer-default-export": 0,
+    "react/jsx-props-no-spreading": 0,
+    "react/no-unescaped-entities":0,
     // suppress errors for missing 'import React' in files
     "react/react-in-jsx-scope": "off",
     "react/jsx-one-expression-per-line": "off",
     // allow jsx syntax in js files (for next.js project)
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }] //should add ".ts" if typescript project
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "paths": ["src"]
+      }
+    }
   }
 }
