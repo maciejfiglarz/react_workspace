@@ -6,8 +6,12 @@ import thunkMiddleware from 'redux-thunk';
 import { createLogger } from 'redux-logger';
 
 import MainTemplate from '../templates/MainTemplate';
-import LoginPage from './LoginPage';
 import reducers from '../store';
+import { routes } from '../routes';
+
+import LoginPage from './LoginPage';
+import Creator from './Creator';
+import Index from './Index';
 
 const loggerMiddleware = createLogger();
 
@@ -18,7 +22,9 @@ const Root = () => (
     <BrowserRouter>
       <MainTemplate>
         <Switch>
-          <Route exact path="/" component={LoginPage} />
+          <Route exact path={routes.home} component={Index} />
+          <Route path={routes.login} component={LoginPage} />
+          <Route path={routes.creator} component={Creator} />
         </Switch>
       </MainTemplate>
     </BrowserRouter>
