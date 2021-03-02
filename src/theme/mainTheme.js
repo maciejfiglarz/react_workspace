@@ -1,5 +1,6 @@
 export const theme = {
   backgroundColor: '#1a1a1b',
+  backgroundFunctionalColor: '#272729',
   borderColor: '#676869',
   colorPrimary: '#d7dadc',
   black: 'hsl(0, 0%, 0%)',

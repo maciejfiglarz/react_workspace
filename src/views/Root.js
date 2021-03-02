@@ -16,7 +16,7 @@ import Index from './Index';
 const loggerMiddleware = createLogger();
 
 const store = createStore(reducers, applyMiddleware(thunkMiddleware, loggerMiddleware));
-
+console.log('store',store);
 const Root = () => (
   <Provider store={store}>
     <BrowserRouter>

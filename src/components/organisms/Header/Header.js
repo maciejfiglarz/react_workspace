@@ -9,7 +9,7 @@ import Logo from './Logo';
 
 import plusIcon from '../../../assets/icons/plus.svg';
 
-const StyledWrapper = styled.nav`
+const StyledWrapper = styled.header`
   position: fixed;
   left: 0;
   top: 0;

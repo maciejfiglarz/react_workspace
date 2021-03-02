@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components';
-import magnifierIcon from 'assets/icons/magnifier.svg';
+import magnifierIcon from '../../../assets/icons/magnifier.svg';
 
 const Input = styled.input`
   padding: 15px 30px;
@@ -7,12 +7,16 @@ const Input = styled.input`
   font-weight: ${({ theme }) => theme.regular};
   background-color: ${({ theme }) => theme.grey100};
   border: none;
-  border-radius: 50px;
-
+  border-radius: 5px;
+  background:  ${({ theme }) => theme.backgroundFunctionalColor};
+  margin-bottom:20px;
+  color:white;
+  display:block;
+  width:100%;
   ::placeholder {
     text-transform: uppercase;
     letter-spacing: 1px;
-    color: ${({ theme }) => theme.grey300};
+    color:white;
   }
 
   ${({ search }) =>

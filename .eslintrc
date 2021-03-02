@@ -8,6 +8,7 @@
   },
   "globals": { "document": true },
   "rules": {
+    "no-console": 0,
     "import/no-unresolved": 1,
     "import/prefer-default-export": 0,
     "react/jsx-props-no-spreading": 0,
