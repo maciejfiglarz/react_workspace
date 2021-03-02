@@ -2,7 +2,6 @@ import API from './api';
 
 const pagination = async () => {
   const result = await API.get(`/posts`);
-  console.log('result',result);
   return result;
 };
 const fetchAll = async () => {

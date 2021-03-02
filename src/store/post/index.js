@@ -8,14 +8,15 @@ const initialState = {
 const loadPosts = (state, action) => {
   const { payload, page } = action;
   let newState = {};
-  if (page > 0) {
-    newState = [...state];
-  } else {
-    newState = { data: {}, page };
-  }
+  // if (page > 0) {
+  //   newState = [...state];
+  // } else {
+  //   newState = { data: {}, page };
+  // }
+  newState = { data: [], page };
 
   Object.keys(payload).forEach((key) => {
-    newState.data[payload[key]._id] = payload[key];
+    newState.data.push(payload[key]);
   });
 
   // for (const key in payload) {
