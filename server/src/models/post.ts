@@ -5,10 +5,10 @@ import IPost from '../interfaces/post';
 
 const PostSchema: Schema = new Schema(
     {
-        _id: mongoose.Schema.Types.ObjectId,
+        // _id: mongoose.Schema.Types.ObjectId,
         title: { type: String, required: true },
-        imageLink: { type: String, required: true },
-        content: { type: String, required: true }
+        // imageLink: { type: String, required: true },
+        author: { type: String, required: true }
     },
     {
         timestamps: true

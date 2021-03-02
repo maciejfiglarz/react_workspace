@@ -6,15 +6,18 @@ const initialState = {
 };
 
 const loadPosts = (state, action) => {
-  // const { payload, page } = action;
-  const { page } = action;
+  const { payload, page } = action;
   let newState = {};
   if (page > 0) {
-    //   newState = Object.assign({}, state);
     newState = [...state];
   } else {
     newState = { data: {}, page };
   }
+
+  Object.keys(payload).forEach((key) => {
+    newState.data[payload[key]._id] = payload[key];
+  });
+
   // for (const key in payload) {
   //   newState.data[payload[key]._id] = payload[key];
   // }
@@ -24,14 +27,19 @@ const loadPosts = (state, action) => {
 
 export default (state = initialState, action) => {
   switch (action.type) {
-    case postConstants.POSTS_FETCH_SUCCESS:
-      // const payload = action.payload;
-      // let newState = Object.assign({}, state);
-      // for (const key in payload) {
-      //   newState.data[payload[key]._id] = payload[key];
-      // }
-      // return newState;
+    case postConstants.POSTS_FETCH_SUCCESS: {
+      // const {payload} = action;
+      // // const newState = { ...state, ...payload };
+      // // for (const key in payload) {
+      // //   newState.data[payload[key]._id] = payload[key];
+      // // }
+      // Object.keys(payload).forEach(key=>{
+      //   // newState.data[payload[key]._id] = payload[key];
+      //   console.log( payload[key]._id);
+      // });
+
       return loadPosts(state, action);
+    }
     default:
       /* code */
       break;
