@@ -49,4 +49,5 @@ const Post: React.FC<IProps> = ({ post, isSingle }) => {
     </>
   );
 };
+
 export default Post;
