@@ -7,18 +7,18 @@ const PostSchema: Schema = new Schema(
     {
         // _id: mongoose.Schema.Types.ObjectId,
         title: { type: String, required: true },
-        // imageLink: { type: String, required: true },
-        author: { type: String, required: true }
+        imageLink: { type: String, required: true },
+        content: { type: String, required: true }
     },
     {
         timestamps: true
     }
 );
 
-PostSchema.post<IPost>('save', function () {
-    // logging.info('Mongo', 'Checkout the book we just saved: ', this);
-    console.log('postDodano');
-});
+// PostSchema.post<IPost>('save', function () {
+//     // logging.info('Mongo', 'Checkout the book we just saved: ', this);
+//     console.log('postDodano');
+// });
 
 export default mongoose.model<IPost>('Post', PostSchema);
 

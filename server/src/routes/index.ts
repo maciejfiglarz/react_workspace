@@ -1,7 +1,7 @@
 import { Router } from 'express';
 import postsRouter from './posts'
 
-let routes = Router();
+const routes = Router();
 
 routes.use('/posts', postsRouter);
 

@@ -4,12 +4,10 @@ import styled from 'styled-components';
 
 import Post from '../Post/Post';
 
-// import { Loader } from './../../containers/loader';
-
 const StyledWrapper = styled.div`
   width: ${({ theme }) => theme.widthContainer};
   max-width: 700px;
-  margin: 0 auto;
+  margin: 20px auto 0 auto;
 `;
 
 const InfiniteList = ({ posts, pagination, type }) => {
@@ -34,15 +32,15 @@ const InfiniteList = ({ posts, pagination, type }) => {
   }, [loadMore]);
 
   useEffect(() => {
-    // window.addEventListener('scroll', () => {
-    //   console.log('load');
-    //   if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
-    setPage((prev) => {
-      setLoadMore(true);
-      return prev + 1;
+    window.addEventListener('scroll', () => {
+      if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
+        console.log('loadPage');
+        setPage((prev) => {
+          setLoadMore(true);
+          return prev + 1;
+        });
+      }
     });
-    //   }
-    // });
   }, []);
 
   return (

@@ -1,12 +1,13 @@
 import API from './api';
 
 const pagination = async () => {
-  const result = await API.get(`/posts`);
-  return result;
+  const result = await API.get(`/posts/pagination`);
+  const { data } = result;
+  return data;
 };
 const fetchAll = async () => {
   const result = await API.get(`/posts`);
-  const {data} = result;
+  const { data } = result;
   return data;
 };
 const postServices = {

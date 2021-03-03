@@ -2,10 +2,9 @@ import API from "./api";
 
 
 const insertPost = async (params) => {
-    const { user } = params;
-  
-  
-    return API.post(`/post-menager/insert-post`, params);
+
+    const result = await API.post(`/posts/insert`, params);
+    return result;
   };
   
   const postMenagerServices = {

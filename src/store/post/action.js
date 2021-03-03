@@ -7,15 +7,15 @@ const loading = (bool) => ({
 });
 
 const pagination = (page, params = {}) => (
-   async (dispatch) => {
+  async (dispatch) => {
     dispatch(loading(true));
-    // const result = await postServices.pagination({ page, params });
-      const { data } = await postServices.fetchAll(params);
-   
+    const result = await postServices.pagination({ page, params });
+    // const { data } = await postServices.fetchAll(params);
+
     // if (data.length > 0) {
     dispatch({
       type: postConstants.POSTS_FETCH_SUCCESS,
-      payload: data,
+      payload: result,
       page,
     });
     // }

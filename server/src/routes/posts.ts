@@ -1,19 +1,13 @@
 import { Router } from 'express';
 
 // const PostController = require("../controller/post");
-import {getAll} from "../controllers/post"
+import {getAll,insertPost,pagination } from "../controllers/post"
 
-let routes = Router();
-
-// routes.get('/', (request, response) => {
-//   response.send('Hello world!');
-// });
+const routes = Router();
 
 routes.get("/", getAll);
-
-routes.get('/hello', (req, res) => {
-  res.status(200).json({test:'f'});
-});
+routes.get("/pagination", pagination);
+routes.post("/insert", insertPost );
 
 
 export default routes;

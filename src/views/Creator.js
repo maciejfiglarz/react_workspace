@@ -1,15 +1,13 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-// import { connect } from 'react-redux';
-// import PropTypes from 'prop-types';
-
-
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 
 import Input from '../components/atoms/Input/Input';
 import Textarea from '../components/atoms/Textarea/Textarea';
 import Button from '../components/atoms/Button/Button';
 
-
+import postMenagerActions from '../store/post-menager/action'
 
 const StyledContainer = styled.section`
   width: 800px;
@@ -22,20 +20,30 @@ const StyledForm = styled.form`
   padding: 30px;
 `;
 
-const Creator = () => {
+const Creator = ({createPost}) => {
   const [title, setTitle] = useState('');
   const [content, setContent] = useState('');
   const [imageLink, setImageLink] = useState('');
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    // createPost({
-    //   post: {
-    //     title,
-    //     content,
-    //     imageLink
-    //   }
-    // });
+  const isValid = () => {
+    if (title.length > 0 && content.length > 0 && imageLink.length > 0) {
+      return true;
+    }
+    return false;
+  }
+
+  const handleSubmit = () => {
+    console.log(title, content, imageLink);
+    if (isValid()) {
+      createPost({
+        post: {
+          title,
+          content,
+          imageLink
+        }
+      });
+    }
+
   };
 
   return (
@@ -63,23 +71,16 @@ const Creator = () => {
   );
 };
 
-// Creator.propTypes = {
-//   // alert: PropTypes.object,
-//   // user: PropTypes.object,
-//   createPost: PropTypes.func,
-//   loading: PropTypes.func,
-// };
+Creator.propTypes = {
+  // alert: PropTypes.object,
+  // user: PropTypes.object,
+  createPost: PropTypes.func.isRequired
+  // loading: PropTypes.func,
+};
 
-// const mapStateToProps = (state) => {
-//   const { alert, user } = state;
-//   return { alert, user };
-// };
 
-// const actionCreators = {
-//   createPost: postMenagerActions.createPost,
-//   loading: postMenagerActions.loading,
-// };
+const actionCreators = {
+  createPost: postMenagerActions.createPost,
+};
 
-// export default connect(mapStateToProps, actionCreators)(Creator);
-
-export default Creator;
+export default connect(null, actionCreators)(Creator);

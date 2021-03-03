@@ -13,15 +13,21 @@ const StyledTitle = styled.h1`
   padding: 7px;
   font-size: ${({ theme }) => theme.fontSize.s};
 `;
+const StyledImage = styled.div`
+  width:100%;
+  height: 300px;
+  background: url(${props => props.url});
+`;
 
 const Post = ({ post, isSingle }) => {
-  const { title } = post;
-  console.log(post);
+  const { title,imageLink,content } = post;
   return (
     <>
       {isSingle && <>Signle</>}
       <StyledWrapper>
+        <StyledImage url={imageLink} />
         <StyledTitle>{title}</StyledTitle>
+        {content}
       </StyledWrapper>
     </>
   );

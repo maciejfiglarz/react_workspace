@@ -15,6 +15,7 @@ const loadPosts = (state, action) => {
   // }
   newState = { data: [], page };
 
+  console.log('page', page);
   Object.keys(payload).forEach((key) => {
     newState.data.push(payload[key]);
   });

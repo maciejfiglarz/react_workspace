@@ -15,6 +15,9 @@ const createPost = (params) => async (dispatch) => {
   const result = await postMenagerServices.insertPost({
     post,
   });
+
+
+  
   console.log('successPost', result);
 
   //   dispatch(alertActions.clear());

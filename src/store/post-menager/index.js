@@ -1,6 +1,6 @@
 import postMenagerConstants from './constants';
 
-let initialState = {
+const initialState = {
   isLoading: false,
 };
 
