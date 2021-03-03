@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import PropTypes from 'prop-types';
 import styled from 'styled-components';
-
-import Post from '../Post/Post.tsx';
+//@ts-ignore
+import Post from '../Post/Post';
 
 const StyledWrapper = styled.div`
   width: ${({ theme }) => theme.widthContainer};
@@ -10,7 +9,13 @@ const StyledWrapper = styled.div`
   margin: 20px auto 0 auto;
 `;
 
-const InfiniteList = ({ posts, pagination, type }) => {
+interface Props {
+  pagination: (page: number, params: any) => void,
+  type: any,
+  posts: any
+}
+
+const InfiniteList: React.FC<Props> = ({ posts, pagination, type }) => {
   const [loadMore, setLoadMore] = useState(true);
   const [page, setPage] = useState(0);
   const { isLoading, data } = posts;
@@ -20,8 +25,9 @@ const InfiniteList = ({ posts, pagination, type }) => {
     index: { isWaitingRoom: false, isActive: true },
   };
 
-  const getData = (load) => {
+  const getData = (load: boolean) => {
     if (load) {
+      //@ts-ignore
       pagination(page, params[type]);
     }
   };
@@ -59,14 +65,5 @@ const InfiniteList = ({ posts, pagination, type }) => {
   );
 };
 
-InfiniteList.propTypes = {
-  type: PropTypes.string,
-  posts: PropTypes.objectOf({ data: PropTypes.array, isLoading: PropTypes.bool }).isRequired,
-  pagination: PropTypes.func.isRequired,
-};
-
-InfiniteList.defaultProps = {
-  type: 'index',
-};
 
 export default InfiniteList;

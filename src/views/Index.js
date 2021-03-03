@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import PropTypes from "prop-types";
 
 import InfinityList from "../components/molecules/InfinityList/InfinityList";
+import Animation from "../components/molecules/Animation/Animation";
 import postActions from "../store/post/action";
 // import DisplaySlider from "../components/molecules/Slider/Slider";
 
@@ -10,6 +11,7 @@ import postActions from "../store/post/action";
 const Index = ({ pagination, posts }) => (
   <>
     {/* <DisplaySlider /> */}
+    <Animation/>
     <InfinityList posts={posts} pagination={pagination} type="index" />
   </>
 );
