@@ -1,7 +1,11 @@
 import styled, { css } from 'styled-components';
 import magnifierIcon from '../../../assets/icons/magnifier.svg';
 
-const Input = styled.input`
+interface Props {
+  search: boolean;
+}
+
+const Input = styled.input<Props>`
   padding: 15px 30px;
   font-size: ${({ theme }) => theme.fontSize.s};
   font-weight: ${({ theme }) => theme.regular};

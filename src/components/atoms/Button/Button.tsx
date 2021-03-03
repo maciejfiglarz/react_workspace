@@ -1,13 +1,18 @@
 import styled, { css } from 'styled-components';
 
-const Button = styled.button`
+interface Props {
+  secondary: boolean;
+}
+
+
+const Button = styled.button<Props>`
   display: flex;
   justify-content: center;
   align-items: center;
   color: black;
   text-decoration: none;
   padding: 0;
-  background-color: ${({ activecolor, theme }) => theme[activecolor]};
+  background-color: ${({ theme }) => theme.primary};
   width: 220px;
   height: 47px;
   border: none;

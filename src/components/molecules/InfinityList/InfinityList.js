@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
-import Post from '../Post/Post';
+import Post from '../Post/Post.tsx';
 
 const StyledWrapper = styled.div`
   width: ${({ theme }) => theme.widthContainer};

@@ -3,11 +3,13 @@ import styled from 'styled-components';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
-import Input from '../components/atoms/Input/Input';
-import Textarea from '../components/atoms/Textarea/Textarea';
-import Button from '../components/atoms/Button/Button';
+import Input from '../components/atoms/Input/Input.tsx';
+import Textarea from '../components/atoms/Textarea/Textarea.tsx';
+import Button from '../components/atoms/Button/Button.tsx';
+
 
 import postMenagerActions from '../store/post-menager/action'
+
 
 const StyledContainer = styled.section`
   width: 800px;
@@ -20,7 +22,7 @@ const StyledForm = styled.form`
   padding: 30px;
 `;
 
-const Creator = ({createPost}) => {
+const Creator = ({ createPost }) => {
   const [title, setTitle] = useState('');
   const [content, setContent] = useState('');
   const [imageLink, setImageLink] = useState('');
@@ -47,27 +49,30 @@ const Creator = ({createPost}) => {
   };
 
   return (
-    <StyledContainer>
-      <StyledForm
-        onSubmit={(e) => {
-          e.preventDefault();
-          handleSubmit();
-        }}
-      >
-        <Input placeholder="Tytuł" value={title} onChange={(e) => setTitle(e.target.value)} />
-        <Input
-          placeholder="Zdjęcie do linku"
-          value={imageLink}
-          onChange={(e) => setImageLink(e.target.value)}
-        />
-        <Textarea
-          placeholder="Treść"
-          value={content}
-          onChange={(e) => setContent(e.target.value)}
-        />
-        <Button type="submit">Dodaj</Button>
-      </StyledForm>
-    </StyledContainer>
+    <>
+    
+      <StyledContainer>
+        <StyledForm
+          onSubmit={(e) => {
+            e.preventDefault();
+            handleSubmit();
+          }}
+        >
+          <Input placeholder="Tytuł" value={title} onChange={(e) => setTitle(e.target.value)} />
+          <Input
+            placeholder="Zdjęcie do linku"
+            value={imageLink}
+            onChange={(e) => setImageLink(e.target.value)}
+          />
+          <Textarea
+            placeholder="Treść"
+            value={content}
+            onChange={(e) => setContent(e.target.value)}
+          />
+          <Button type="submit">Dodaj</Button>
+        </StyledForm>
+      </StyledContainer>
+    </>
   );
 };
 

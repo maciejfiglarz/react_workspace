@@ -2,12 +2,14 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 
 import styled from 'styled-components';
-
-// import Button from '../../atoms/Button/Button';
-import ButtonIcon from '../../atoms/ButtonIcon/ButtonIcon';
+// @ts-ignore
+import ButtonIcon from '../../atoms/ButtonIcon/ButtonIcon.tsx';
 import Logo from './Logo';
 
 import plusIcon from '../../../assets/icons/plus.svg';
+
+
+
 
 const StyledWrapper = styled.header`
   position: fixed;
@@ -29,7 +31,9 @@ const StyledContainer = styled.div`
   height:100%;
 `;
 
-const Header = () => (
+
+
+const Header: React.FC = () => (
   <StyledWrapper>
     <StyledContainer>
       <Logo />

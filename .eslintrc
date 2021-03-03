@@ -9,6 +9,7 @@
   "globals": { "document": true },
   "rules": {
     "no-console": 0,
+    "react/prop-types":0,
     "no-underscore-dangle":  ["error", { "allow": ["_id"] }],
     "import/no-unresolved": 1,
     "import/prefer-default-export": 0,

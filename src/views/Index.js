@@ -4,13 +4,15 @@ import PropTypes from "prop-types";
 
 import InfinityList from "../components/molecules/InfinityList/InfinityList";
 import postActions from "../store/post/action";
+// import DisplaySlider from "../components/molecules/Slider/Slider";
 
 
 const Index = ({ pagination, posts }) => (
-    <div className="container">
-      <InfinityList posts={posts} pagination={pagination} type="index"/>
-    </div>
-  );
+  <>
+    {/* <DisplaySlider /> */}
+    <InfinityList posts={posts} pagination={pagination} type="index" />
+  </>
+);
 
 Index.propTypes = {
   posts: PropTypes.objectOf({ data: PropTypes.object, isLoading: PropTypes.bool }).isRequired,

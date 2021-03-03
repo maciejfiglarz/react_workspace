@@ -7,7 +7,7 @@ import PageContext from '../context';
 import GlobalStyle from '../theme/GlobalStyle';
 import { theme } from '../theme/mainTheme';
 
-import Header from '../components/organisms/Header/Header';
+import Header from '../components/organisms/Header/Header.tsx';
 
 const pageType = 'note';
 

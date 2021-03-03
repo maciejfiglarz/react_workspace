@@ -1,6 +1,12 @@
 import styled from 'styled-components';
 
-const ButtonIcon = styled.button`
+interface Props {
+  icon: string,
+  activeclass: string
+}
+
+
+const ButtonIcon = styled.button<Props>`
   display: block;
   width: 22px;
   height: 22px;
