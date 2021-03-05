@@ -4,10 +4,10 @@ import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 // @ts-ignore
 import ButtonIcon from '../../atoms/ButtonIcon/ButtonIcon.tsx';
-import Logo from './Logo';
+// @ts-ignore
+import Logo from './Logo.tsx';
 
 import plusIcon from '../../../assets/icons/plus.svg';
-
 
 
 

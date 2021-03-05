@@ -7,7 +7,7 @@ export let pagination = async (req: Request, res: Response) => {
     const perPage = 10;
     const { body } = req;
     const { page, params } = body;
-  
+
     const postService = new PostService();
     const result = await postService.pagination(page, perPage, params);
     console.log('result',result);

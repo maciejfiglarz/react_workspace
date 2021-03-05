@@ -2,15 +2,13 @@ import React from "react";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
 
-import InfinityList from "../components/molecules/InfinityList/InfinityList";
+import InfinityList from "../components/molecules/InfinityList/InfinityList.tsx";
 import Animation from "../components/molecules/Animation/Animation";
 import postActions from "../store/post/action";
-// import DisplaySlider from "../components/molecules/Slider/Slider";
 
 
 const Index = ({ pagination, posts }) => (
   <>
-    {/* <DisplaySlider /> */}
     <Animation/>
     <InfinityList posts={posts} pagination={pagination} type="index" />
   </>
@@ -19,7 +17,6 @@ const Index = ({ pagination, posts }) => (
 Index.propTypes = {
   posts: PropTypes.objectOf({ data: PropTypes.object, isLoading: PropTypes.bool }).isRequired,
   pagination: PropTypes.func.isRequired,
-  // alert: PropTypes.object,
 };
 
 const mapStateToProps = (state) => {

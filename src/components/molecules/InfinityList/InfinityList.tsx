@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
+
 //@ts-ignore
-import Post from '../Post/Post';
+
+import Post from '../Post/Post.tsx';
 
 const StyledWrapper = styled.div`
   width: ${({ theme }) => theme.widthContainer};
