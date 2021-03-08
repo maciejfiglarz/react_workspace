@@ -1,16 +1,127 @@
 {
   "posts": [
-    { "id": 1, "title": "json-server", "author": "typicode" },
-    { "id": 2, "title": "json-serverxxxx", "author": "typicode" }
-  ],
-  "comments": [
     {
       "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "title": "El Calbuco - Chile",
+      "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+      "imageLink": "https://wiemy.to/upload/media/entries/2021-03/02/20116-0-a8f92f1accd2b4fd3c5b2e6e261cb736.jpg"
+    },
+    {
+      "id": 2,
+      "title": "Lis polarny - Stany Zjednoczone",
+      "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+      "imageLink": "https://wiemy.to/upload/media/entries/2021-03/02/20116-1-a8f92f1accd2b4fd3c5b2e6e261cb736.jpg"
+    },
+    {
+      "id": 3,
+      "title": "Wspólne emocje",
+      "content": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable",
+      "imageLink": "https://wiemy.to/upload/media/entries/2021-03/02/20116-2-a8f92f1accd2b4fd3c5b2e6e261cb736.jpg"
+    },
+    {
+      "id": 4,
+      "title": "Sylwetka nosorożca - Kenia",
+      "content": "The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from 'de Finibus Bonorum et Malorum' by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.",
+      "imageLink": "https://wiemy.to/upload/media/entries/2021-03/02/20116-3-a8f92f1accd2b4fd3c5b2e6e261cb736.jpg"
+    },
+    {
+      "id": 5,
+      "title": "Podwodny widok Lofotów w zimie",
+      "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+      "imageLink": "https://wiemy.to/upload/media/entries/2021-03/02/20116-5-4173639c3355339e00edb14a85792f19.jpg"
+    },
+    {
+      "id": 6,
+      "title": "Nemo w całej swojej okazałości",
+      "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+      "imageLink": "https://wiemy.to/upload/media/entries/2021-03/02/20116-6-4173639c3355339e00edb14a85792f19.jpg"
+    },
+    {
+      "id": 7,
+      "title": "Zabawkowe domki - Rosja",
+      "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+      "imageLink": "https://wiemy.to/upload/media/entries/2021-03/02/20116-7-4173639c3355339e00edb14a85792f19.jpg"
     }
   ],
-  "profile": {
-    "name": "typicode"
-  }
+  "projects": [
+    {
+      "id": 1,
+      "name": "Argon Design System",
+      "imageLink": "https://demos.creative-tim.com/nextjs-argon-dashboard/_next/static/images/bootstrap-ab904daa548967670847fc3929bf50f4.jpg",
+      "budget":"$2,500 USD",
+      "status": "pending",
+      "progress": 60 
+    },
+    {
+      "id": 2,
+      "name": "Angular Now UI Kit PRO",
+      "imageLink": "https://demos.creative-tim.com/nextjs-argon-dashboard/_next/static/images/angular-368685db949cddcd901ba54559a727d9.jpg",
+      "budget":"$1,800 USD",
+      "status": "completed",
+      "progress": 100 
+    },
+    {
+      "id": 3,
+      "name": "Black Dashboard",
+      "imageLink": "https://demos.creative-tim.com/nextjs-argon-dashboard/_next/static/images/sketch-e7c82e5c569db9d9761b13ef1384f702.jpg",
+      "budget":"$3,150 USD",
+      "status": "delayed",
+      "progress": 20 
+    },
+    {
+      "id": 4,
+      "name": "React Material Dashboard",
+      "imageLink": "https://demos.creative-tim.com/nextjs-argon-dashboard/_next/static/images/react-c4eb3d0be0cf5a2d156a123bdf7fb40d.jpg",
+      "budget":"$2,500 USD",
+      "status": "on schedule",
+      "progress": 90 
+    },
+    {
+      "id": 5,
+      "name": "Vue Paper UI Kit PRO",
+      "imageLink": "https://demos.creative-tim.com/nextjs-argon-dashboard/_next/static/images/vue-9378e368a757bd0c7ca556a0258cb527.jpg",
+      "budget":"$2,500 USD",
+      "status": "pending",
+      "progress": 60 
+    },{
+      "id": 6,
+      "name": "Argon Design System",
+      "imageLink": "https://demos.creative-tim.com/nextjs-argon-dashboard/_next/static/images/bootstrap-ab904daa548967670847fc3929bf50f4.jpg",
+      "budget":"$2,500 USD",
+      "status": "pending",
+      "progress": 60 
+    },
+    {
+      "id": 7,
+      "name": "Angular Now UI Kit PRO",
+      "imageLink": "https://demos.creative-tim.com/nextjs-argon-dashboard/_next/static/images/angular-368685db949cddcd901ba54559a727d9.jpg",
+      "budget":"$1,800 USD",
+      "status": "completed",
+      "progress": 100 
+    },
+    {
+      "id": 8,
+      "name": "Black Dashboard",
+      "imageLink": "https://demos.creative-tim.com/nextjs-argon-dashboard/_next/static/images/sketch-e7c82e5c569db9d9761b13ef1384f702.jpg",
+      "budget":"$3,150 USD",
+      "status": "delayed",
+      "progress": 20 
+    },
+    {
+      "id": 9,
+      "name": "React Material Dashboard",
+      "imageLink": "https://demos.creative-tim.com/nextjs-argon-dashboard/_next/static/images/react-c4eb3d0be0cf5a2d156a123bdf7fb40d.jpg",
+      "budget":"$2,500 USD",
+      "status": "on schedule",
+      "progress": 90 
+    },
+    {
+      "id": 10,
+      "name": "Vue Paper UI Kit PRO",
+      "imageLink": "https://demos.creative-tim.com/nextjs-argon-dashboard/_next/static/images/vue-9378e368a757bd0c7ca556a0258cb527.jpg",
+      "budget":"$2,500 USD",
+      "status": "pending",
+      "progress": 60 
+    }
+  ]
 }

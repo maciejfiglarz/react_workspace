@@ -12,15 +12,15 @@ const Input = styled.input<Props>`
   background-color: ${({ theme }) => theme.grey100};
   border: none;
   border-radius: 5px;
-  background:  ${({ theme }) => theme.backgroundFunctionalColor};
-  margin-bottom:20px;
-  color:white;
-  display:block;
-  width:100%;
+  background-color: ${({ theme }) => theme.backgroundFunctionalColor};
+  margin-bottom: 20px;
+  color: white;
+  display: block;
+  width: 100%;
   ::placeholder {
     text-transform: uppercase;
     letter-spacing: 1px;
-    color:white;
+    color: white;
   }
 
   ${({ search }) =>
@@ -32,6 +32,10 @@ const Input = styled.input<Props>`
       background-size: 15px;
       background-position: 15px 50%;
       background-repeat: no-repeat;
+      background-color: transparent;
+      border: 2px solid ${({ theme }) => theme.backgroundFunctionalDarkColor};
+      max-width: 150px;
+      border-radius: 20px;
     `}
 `;
 

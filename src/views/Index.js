@@ -1,17 +1,45 @@
-import React from "react";
-import { connect } from "react-redux";
-import PropTypes from "prop-types";
+import React from 'react';
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
+import styled from 'styled-components';
 
-import InfinityList from "../components/molecules/InfinityList/InfinityList.tsx";
-import Animation from "../components/molecules/Animation/Animation";
-import postActions from "../store/post/action";
+// import InfinityList from '../components/molecules/InfinityList/InfinityList.tsx';
+// import Animation from '../components/molecules/Animation/Animation';
+import postActions from '../store/post/action';
+// import Slider from '../components/molecules/Slider/Slider';
+import Sidebar from '../components/organisms/Sidebar/Sidebar';
+import Header from '../components/organisms/Header/Header.tsx';
+import Card from '../components/atoms/Card/Card';
+import CardTitle from '../components/atoms/Card/CardTitle';
 
+import Table from '../components/atoms/Input/Table/Table';
 
+const StyledWrapper = styled.section`
+  width: calc(100% - 250px);
+  margin-left: 250px;
+`;
+
+const StyledContainer = styled.div`
+  margin: -20px auto 0 auto;
+  width: ${({ theme }) => theme.maxWidthContainer};
+  max-width: ${({ theme }) => theme.widthContainer};
+`;
+
+/*eslint-disable */
 const Index = ({ pagination, posts }) => (
-  <>
-    <Animation/>
-    <InfinityList posts={posts} pagination={pagination} type="index" />
-  </>
+  <StyledWrapper>
+    {/* <Slider />
+    <Animation /> */}
+    {/* <InfinityList posts={posts} pagination={pagination} type="index" /> */}
+    <Sidebar />
+    <Header />
+    <StyledContainer>
+      <Card top={-20}>
+        <CardTitle>Projects</CardTitle>
+        <Table type="projects" />
+      </Card>
+    </StyledContainer>
+  </StyledWrapper>
 );
 
 Index.propTypes = {
@@ -29,68 +57,3 @@ const actionCreators = {
 };
 
 export default connect(mapStateToProps, actionCreators)(Index);
-
-
-
-
-
-// import { connect } from 'react-redux';
-// import PropTypes from 'prop-types';
-
-// import React, { useEffect, useState } from 'react';
-// import postActions from '../store/post/action';
-
-// const Index = ({ page,data, pagination }) => {
-//   // const { isLoading, data } = ['test', 'test2'];
-//   const [loadMore, setLoadMore] = useState(true);
-//   const [page, setPage] = useState(0);
-
-//   const getData = (load) => {
-//     if (load) {
-//       pagination(page);
-//     }
-//     console.log(posts);
-//   };
-
-//   useEffect(() => {
-//     getData(loadMore);
-//     setLoadMore(false);
-//   }, [loadMore]);
-
-//   useEffect(() => {
-//     window.addEventListener('scroll', () => {
-//       console.log('load');
-//       if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
-//         setPage((prev) => {
-//           setLoadMore(true);
-//           return prev + 1;
-//         });
-//       }
-//     });
-//   }, []);
-//   console.log(posts);
-//   return (
-//     <div>
-//       {/* {data && <>{!isLoading && data.map((el) => el)}</>} */}
-//       { Object.keys(posts.data).map((el) => el)}
-//       {isLoading && <>Loader</>}
-//     </div>
-//   );
-// };
-
-// Index.propTypes = {
-//   // posts: PropTypes.objectOf({ data: PropTypes.object, isLoading: PropTypes.bool }).isRequired,
-//   pagination: PropTypes.func.isRequired,
-// };
-
-// const mapStateToProps = (state) => {
-//   const { posts } = state;
-//   const {data,page} = posts;
-//   return { page,data };
-// };
-
-// const actionCreators = {
-//   pagination: postActions.pagination,
-// };
-
-// export default connect(mapStateToProps, actionCreators)(Index);

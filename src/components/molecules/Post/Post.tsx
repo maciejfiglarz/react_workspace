@@ -40,7 +40,7 @@ const Post: React.FC<IProps> = ({ post, isSingle }) => {
   const { title, imageLink, content } = post;
   return (
     <>
-      {isSingle && <>Signle</>}
+      {isSingle && <></>}
       <StyledWrapper>
         <StyledImage url={imageLink} />
         <StyledTitle>{title}</StyledTitle>

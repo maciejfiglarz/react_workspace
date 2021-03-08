@@ -8,6 +8,16 @@ const GlobalStyle = createGlobalStyle`
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
+  * {
+    margin-block-start:0; 
+    margin-block-end:0; 
+    margin-inline-start:0; 
+    margin-inline-end:0;
+    padding-block-start:0; 
+    padding-block-end:0; 
+    padding-inline-start:0; 
+    padding-inline-end:0;
+  }
   
   html {
     font-size: 62.5%; 
@@ -18,10 +28,12 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
     font-size: 1.6rem;
     font-family: "Montserrat", sans-serif;
-    background:#030303;
-    padding-top:50px;
-    color:white;
+    /* background:#030303; */
+    background-color:#f5f6f8;
+    color:#525f7f;
+    
   }
+  
 `;
 
 export default GlobalStyle;

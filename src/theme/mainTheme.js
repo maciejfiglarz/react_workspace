@@ -1,6 +1,8 @@
 export const theme = {
-  backgroundColor: '#1a1a1b',
+  backgroundColor: '#ffffff',
   backgroundFunctionalColor: '#272729',
+  backgroundFunctionalDarkColor: '#595a61',
+  backgroundDarkColor: '#212429',
   borderColor: '#676869',
   colorPrimary: '#d7dadc',
   black: 'hsl(0, 0%, 0%)',
@@ -16,4 +18,26 @@ export const theme = {
   },
   maxWidthContainer: '1100px',
   widthContainer: '95%',
+};
+
+
+const size = {
+  mobileS: '320px',
+  mobileM: '375px',
+  mobileL: '425px',
+  tablet: '768px',
+  laptop: '1024px',
+  laptopL: '1440px',
+  desktop: '2560px'
+}
+
+export const device = {
+  mobileS: `(min-width: ${size.mobileS})`,
+  mobileM: `(min-width: ${size.mobileM})`,
+  mobileL: `(min-width: ${size.mobileL})`,
+  tablet: `(min-width: ${size.tablet})`,
+  laptop: `(min-width: ${size.laptop})`,
+  laptopL: `(min-width: ${size.laptopL})`,
+  desktop: `(min-width: ${size.desktop})`,
+  desktopL: `(min-width: ${size.desktop})`
 };

@@ -7,7 +7,9 @@ import PageContext from '../context';
 import GlobalStyle from '../theme/GlobalStyle';
 import { theme } from '../theme/mainTheme';
 
-import Header from '../components/organisms/Header/Header.tsx';
+// import Header from '../components/organisms/Header/Header.tsx';
+
+import Sidebar from '../components/organisms/Sidebar/Sidebar';
 
 const pageType = 'note';
 
@@ -16,7 +18,8 @@ const MainTemplate = ({ children }) => (
     <PageContext.Provider value={pageType}>
       <GlobalStyle />
       <ThemeProvider theme={theme}>
-        <Header />
+        {/* <Header /> */}
+        <Sidebar />
         {children}
       </ThemeProvider>
     </PageContext.Provider>
