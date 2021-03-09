@@ -1,6 +1,8 @@
 import React from 'react';
-
+import { Dashboard, VerifiedUser } from '@material-ui/icons';
 import styled from 'styled-components';
+import { yellow } from '@material-ui/core/colors';
+
 
 const StyledWrapper = styled.nav`
   position: fixed;
@@ -18,9 +20,31 @@ const StyledWrapper = styled.nav`
   overflow-y: auto;
 `;
 
-const Sidebar = () => {
-  const test = '';
-  return <StyledWrapper>{test}</StyledWrapper>;
+const StyledMenu = styled.ul`
+  margin-top:30px;
+  list-style-type: none;
+`;
+
+const StyledMenuItem = styled.li`
+  padding:10px;
+`;
+
+const StyledDashboardIcon = styled(Dashboard)
+  `background:red;`
+  ;
+
+const iconStyle = {
+  background: 'yellow',
 };
+
+const Sidebar = () => (
+  <StyledWrapper>
+    <StyledMenu>
+      <StyledMenuItem><StyledDashboardIcon />Dashboard</StyledMenuItem>
+      <StyledMenuItem><VerifiedUser style={iconStyle} />Projects</StyledMenuItem>
+      <StyledMenuItem><VerifiedUser />Workers</StyledMenuItem>
+    </StyledMenu>
+  </StyledWrapper>
+);
 
 export default Sidebar;

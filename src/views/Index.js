@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
+import Button from '@material-ui/core/Button';
 
 // import InfinityList from '../components/molecules/InfinityList/InfinityList.tsx';
 // import Animation from '../components/molecules/Animation/Animation';
@@ -13,6 +14,8 @@ import Card from '../components/atoms/Card/Card';
 import CardTitle from '../components/atoms/Card/CardTitle';
 
 import Table from '../components/atoms/Input/Table/Table';
+
+
 
 const StyledWrapper = styled.section`
   width: calc(100% - 250px);
@@ -38,9 +41,12 @@ const Index = ({ pagination, posts }) => (
         <CardTitle>Projects</CardTitle>
         <Table type="projects" />
       </Card>
+      <Button variant="contained" color="primary">
+      Hello World
+    </Button>
     </StyledContainer>
   </StyledWrapper>
-);
+)
 
 Index.propTypes = {
   posts: PropTypes.objectOf({ data: PropTypes.object, isLoading: PropTypes.bool }).isRequired,

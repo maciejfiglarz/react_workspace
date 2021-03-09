@@ -50,7 +50,7 @@ const Creator = ({ createPost }) => {
 
   return (
     <>
-    
+
       <StyledContainer>
         <StyledForm
           onSubmit={(e) => {

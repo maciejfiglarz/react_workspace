@@ -12,7 +12,7 @@ import { routes } from '../routes';
 import LoginPage from './LoginPage';
 import Creator from './Creator';
 import Index from './Index';
-import SinglePost from "./SinglePost";
+import SinglePost from "./SinglePost.tsx";
 
 const loggerMiddleware = createLogger();
 
