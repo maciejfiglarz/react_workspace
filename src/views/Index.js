@@ -13,7 +13,7 @@ import Header from '../components/organisms/Header/Header.tsx';
 import Card from '../components/atoms/Card/Card';
 import CardTitle from '../components/atoms/Card/CardTitle';
 
-import Table from '../components/atoms/Input/Table/Table';
+import Table from '../components/atoms/Table/Table';
 
 
 

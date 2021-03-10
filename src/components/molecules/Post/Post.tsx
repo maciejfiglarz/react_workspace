@@ -12,7 +12,6 @@ const StyledTitle = styled.h1`
   font-size: ${({ theme }) => theme.fontSize.s};
 `;
 
-
 interface IImage {
   url: string
 }

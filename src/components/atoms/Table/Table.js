@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { Table, Thead, Tbody, Tr, Th, Td } from 'react-super-responsive-table';
 import 'react-super-responsive-table/dist/SuperResponsiveTableStyle.css';
 
-import projectsServices from '../../../../services/projects';
+import projectsServices from '../../../services/projects';
 
 const StyledTable = styled(Table)`
   width: calc(102% + 20px);

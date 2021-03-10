@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+//@ts-ignore
 import Input from '../../atoms/Input/Input.tsx';
 
 const StyledContainer = styled.section`

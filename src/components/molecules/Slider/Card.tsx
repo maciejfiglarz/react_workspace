@@ -13,7 +13,11 @@ const StyledInner = styled.div`
   bottom: 0;
   padding: 3%;
 `;
-const StyledImage = styled.div`
+
+interface IImage {
+  url: string
+}
+const StyledImage = styled.div<IImage>`
   width: 100%;
   height: 100%;
   background: url(${(props) => props.url});
@@ -32,9 +36,16 @@ const StyledLink = styled(NavLink)`
   color: white;
 `;
 
-const Card = ({ imageLink, title, content, id }) => {
-  const prepareContent = (string) =>
-    string.length > 50 ? `${string.substring(0, 50)}...` : string;
+interface ICard {
+  imageLink: string,
+  title: string,
+  content: string,
+  id: string
+}
+
+const Card: React.FC<ICard> = ({ imageLink, title, content, id }) => {
+  const prepareContent = (text: string) =>
+    text.length > 50 ? `${text.substring(0, 50)}...` : text;
 
   return (
     <StyledLink to={`/post/${id}`}>

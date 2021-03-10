@@ -28,20 +28,16 @@ const StyledMenuItem = styled.li`
   padding: 10px;
 `;
 
-// const StyledDashboardIcon = styled(Dashboard)`
-//   /* background: #5e72e4; */
-// `;
-// const iconStyle = {
-//   marginRight: '10px',
-//   // background: '#5e72e4',
-// };
-
 const StyledLink = styled(NavLink)`
   text-decoration: none;
   color: ${({ theme }) => theme.textColor};
   opacity: 0.2 !important;
   &:hover {
-    opacity: 1;
+    ${StyledMenuItem}{
+      opacity: 1;
+    background:red;
+    }
+  
   }
 `;
 
