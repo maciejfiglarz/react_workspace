@@ -3,6 +3,7 @@ export const theme = {
   backgroundFunctionalColor: '#272729',
   backgroundFunctionalDarkColor: '#595a61',
   backgroundDarkColor: '#212429',
+  textColor: '#525f7f',
   borderColor: '#676869',
   colorPrimary: '#d7dadc',
   black: 'hsl(0, 0%, 0%)',
