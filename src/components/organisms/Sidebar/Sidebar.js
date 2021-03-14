@@ -41,11 +41,7 @@ const StyledLink = styled(NavLink)`
   }
 `;
 
-
 const  productCategories = ['electronics','jewelery','men clothing','women clothing'];
-
-
-
 
 const Sidebar = () =>
 
