@@ -12,6 +12,7 @@ import { routes } from '../routes';
 import LoginPage from './LoginPage';
 import Creator from './Creator';
 import Index from './Index';
+import ProductsList from './ProductsList';
 import SinglePost from "./SinglePost.tsx";
 
 const loggerMiddleware = createLogger();
@@ -44,6 +45,7 @@ const Root = () => (
           <Route exact path={routes.home} component={Index} />
           <Route path={routes.login} component={LoginPage} />
           <Route path={routes.creator} component={Creator} />
+          <Route path={routes.productsList} component={ProductsList} />
           <Route path={routes.singlePost} component={SinglePost} />
         </Switch>
       </MainTemplate>

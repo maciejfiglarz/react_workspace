@@ -3,7 +3,7 @@ export const routes = {
     login: '/login',
     creator: '/creator',
     singlePost: '/post/:id',
-
+    productsList: '/products/:id',
     // notes: '/notes',
     // creator: '/notes/details/:id',
     // twitters: '/twitters',
