@@ -6,8 +6,10 @@ import PostsReducer from "./post";
 // // import AuthenticationReducer  from "./authentication/";
 // import AlertsReducer from "./alert";
 
+
 const rootReducer = combineReducers({
   posts: PostsReducer,
+
 //   postMenager: PostMenagerReducer,
 //   user: UserReducer,
 //   comment: CommentReducer,

@@ -16,8 +16,26 @@ import SinglePost from "./SinglePost.tsx";
 
 const loggerMiddleware = createLogger();
 
-const store = createStore(reducers, applyMiddleware(thunkMiddleware, loggerMiddleware));
-console.log('store',store);
+
+
+  // // const [categories, setCategories] = useState<any>([]);
+  // const getCategories = async () => {
+  //   const data = await productServices.fetchAllCategories();
+  //   setCategories(data);
+  // }
+  // useEffect(() => {
+  //   getCategories();
+  // }, []);
+
+
+
+// const initialState = {
+//   productCategories: ['electronics','jewelery','men clothing','women clothing']
+// }
+
+
+const store = createStore(reducers,  applyMiddleware(thunkMiddleware, loggerMiddleware));
+console.log('store', store);
 const Root = () => (
   <Provider store={store}>
     <BrowserRouter>

@@ -55,6 +55,7 @@ Index.propTypes = {
 
 const mapStateToProps = (state) => {
   const { posts } = state;
+  console.log('posts',posts);
   return { posts };
 };
 
