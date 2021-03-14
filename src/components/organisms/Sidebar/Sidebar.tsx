@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 // import { Dashboard, VerifiedUser } from '@material-ui/icons';
 import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
+import productServices from "../../../services/product";
 
 const StyledWrapper = styled.nav`
   position: fixed;
@@ -41,25 +42,42 @@ const StyledLink = styled(NavLink)`
   }
 `;
 
-const Sidebar = () => (
-  <StyledWrapper>
-    <StyledMenu>
-      <StyledLink to="/faq" activeClassName="selected">
-        <StyledMenuItem>
-          {/* <StyledDashboardIcon style={iconStyle} /> */}
+const Sidebar = () => {
+  const [categories, setCategories] = useState<any>([]);
+  const getCategories = async () => {
+    const data = await productServices.fetchAllCategories();
+    setCategories(data);
+  }
+  useEffect(() => {
+    getCategories();
+  }, []);
+
+  return (
+    <StyledWrapper>
+      <StyledMenu>
+        <StyledLink to="/faq" activeClassName="selected">
+          <StyledMenuItem>
+            {/* <StyledDashboardIcon style={iconStyle} /> */}
           Dashboard
         </StyledMenuItem>
-      </StyledLink>
-      <StyledMenuItem>
-        {/* <VerifiedUser style={iconStyle} /> */}
+        </StyledLink>
+        <StyledMenuItem>
+          {/* <VerifiedUser style={iconStyle} /> */}
         Projects
       </StyledMenuItem>
-      <StyledMenuItem>
-        {/* <VerifiedUser style={iconStyle} /> */}
+        <StyledMenuItem>
+          {/* <VerifiedUser style={iconStyle} /> */}
         Workers
-      </StyledMenuItem>
-    </StyledMenu>
-  </StyledWrapper>
-);
+
+
+        {categories.length > 0 && categories.map((s: any) => (
+            <div className="">{s}l</div>
+          ))}
+
+        </StyledMenuItem>
+      </StyledMenu>
+    </StyledWrapper>
+  )
+};
 
 export default Sidebar;

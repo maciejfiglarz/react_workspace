@@ -13,7 +13,7 @@ import Header from '../components/organisms/Header/Header.tsx';
 import Card from '../components/atoms/Card/Card';
 import CardTitle from '../components/atoms/Card/CardTitle';
 
-import Table from '../components/atoms/Table/Table';
+// import Table from '../components/atoms/Table/Table';
 
 
 
@@ -39,10 +39,10 @@ const Index = ({ pagination, posts }) => (
     <StyledContainer>
       <Card top={-20}>
         <CardTitle>Projects</CardTitle>
-        <Table type="projects" />
+        {/* <Table type="projects" /> */}
       </Card>
       <Button variant="contained" color="primary">
-      Hello World
+        Hello World
     </Button>
     </StyledContainer>
   </StyledWrapper>
